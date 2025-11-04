@@ -1,0 +1,179 @@
+/* =========================================================
+   GLOBAL RESET + BASE UI
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  background: #f5f5f5;
+  color: #111;
+}
+
+/* =========================================================
+   HEADER / NAVBAR (Glass UI)
+========================================================= */
+#site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  z-index: 20;
+}
+
+#site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .9rem 1.2rem;
+}
+
+#main-nav ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+#main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: inherit;
+  transition: .25s;
+}
+
+#main-nav a:hover {
+  color: #00b46d;
+}
+
+/* HERO BACKGROUNDS */
+.hero.default {
+  background: url("https://w0.peakpx.com/wallpaper/676/825/HD-wallpaper-flag-of-bangladesh-grunge-art-rhombus-grunge-texture-bangladesh-flag-asia-national-symbols-bangladesh-creative-art.jpg") center/cover no-repeat;
+}
+
+.hero.flag1 {
+  background: url("https://w0.peakpx.com/wallpaper/37/497/HD-wallpaper-flag-of-bangladesh-concrete-texture-stone-background-bangladesh-flag-asia-bangladesh-flags-on-stone.jpg") center/cover no-repeat;
+}
+
+.hero.flag2 {
+  background: url("https://w0.peakpx.com/wallpaper/1018/265/HD-wallpaper-bangladesh-bd-beautiful-country-flag-logo-love-thumb-world.jpg") center/cover no-repeat;
+}
+
+.hero.flag3 {
+  background: linear-gradient(135deg, #006a4e, #c30d23);
+}
+
+
+/* DARK MODE (Optional Style) */
+body.dark-mode {
+  background: #111;
+  color: #fff;
+}
+
+body.dark-mode header,
+body.dark-mode section,
+body.dark-mode footer {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+}
+
+/* =========================================================
+   BUTTONS (Glass Frost UI)
+========================================================= */
+.hero-buttons {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  z-index: 50;
+}
+
+#bg-switch, #mode-toggle {
+  padding: .65rem 1.2rem;
+  border-radius: .6rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 25px rgba(0,0,0,0.35);
+  transition: .25s;
+}
+
+#bg-switch:hover, #mode-toggle:hover {
+  background: rgba(255,255,255,0.28);
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+section .container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1.4rem;
+}
+
+h2 {
+  margin-bottom: .6rem;
+  font-size: 2rem;
+  color: #008f5a;
+  transition: .3s;
+}
+
+/* =========================================================
+   CHAT UI
+========================================================= */
+.chat-container {
+  background: rgba(255,255,255,0.25);
+  padding: 1rem;
+  border-radius: .8rem;
+  backdrop-filter: blur(14px);
+}
+
+.message.user {
+  text-align: right;
+  background: #0085ff22;
+  padding: 6px;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.message.bot {
+  text-align: left;
+  background: #00ff5a22;
+  padding: 6px;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+/* =========================================================
+   DARK MODE (FINAL FIXED)
+========================================================= */
+.dark-mode {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+.dark-mode #site-header {
+  background: rgba(0,0,0,0.45);
+}
+
+.dark-mode .hero::before {
+  filter: brightness(.55);
+}
+
+.dark-mode h2 {
+  color: #00eaff !important;
+}
+
+.dark-mode #main-nav a {
+  color: #00eaff;
+}
